@@ -1,6 +1,6 @@
 <?php
 namespace Medoo;
-require "Medoo.php"; // 引入数据库类
+require "../public/Medoo.php"; // 引入数据库类
 
 class GetFood {
     // connect info
