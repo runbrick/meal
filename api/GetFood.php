@@ -1,28 +1,9 @@
 <?php
 namespace Medoo;
-require "../public/Medoo.php"; // 引入数据库类
-
-class GetFood {
-    // connect info
-    public $option_connect = array(
-        'database_type' => 'mysql',
-        'database_name' => 'eat',
-        'server' => 'localhost',
-        'username' => 'root',
-        'password' => 'root',
-        'charset' => 'utf8',
-        'port'  => 3306,
-        'prefix' => 'eat_' // 前缀
-        );
-    // new connect
-    public $connect = '';
+include "./PublicFood.php";
+class GetFood extends PublicFood {
     // param
     private $food  = array();
-
-    public function __construct()
-    {
-        $this->connect = new Medoo($this->option_connect); // new class
-    }
 
     /**
      * [getList get food list]
@@ -30,7 +11,7 @@ class GetFood {
      */
     public function getList()
     {
-        $list  =  $this->connect ->select("list",array('title','type'));
+        $list  =  $this->connect->select("list",array('title','type'));
         foreach ($list as $k=>$v){
             switch ($v['type']){
                 case 1 :
