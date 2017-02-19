@@ -14,7 +14,7 @@ class PublicFood{
         'database_name' => 'eat',
         'server' => 'localhost',
         'username' => 'root',
-        'password' => 'root',
+        'password' => '123456',
         'charset' => 'utf8',
         'port'  => 3306,
         'prefix' => 'eat_'
