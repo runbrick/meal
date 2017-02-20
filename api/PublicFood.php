@@ -12,8 +12,8 @@ class PublicFood{
     protected $option_connect = array(
         'database_type' => 'mysql',
         'database_name' => 'eat',
-        'server' => 'localhost',
-        'username' => 'root',
+        'server' => '27.122.56.118',
+        'username' => 'mlyxy',
         'password' => '123456',
         'charset' => 'utf8',
         'port'  => 3306,
